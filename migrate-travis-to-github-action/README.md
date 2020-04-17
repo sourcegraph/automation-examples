@@ -1,18 +1,18 @@
 # Migrate from Travis CI to GitHub Actions
 
-> NOTE: Sourcegraph Campaigns require the [Sourcegraph CLI](https://github.com/sourcegraph/src-cli) be [installed](https://github.com/sourcegraph/src-cli#installation) and [configured](https://github.com/sourcegraph/src-cli#setup) to point at your [Campaigns enabled](https://docs.sourcegraph.com/user/automation#configuration) Sourcegraph instance.
+> NOTE: Sourcegraph Campaigns require the [Sourcegraph CLI](https://github.com/sourcegraph/src-cli) be [installed](https://github.com/sourcegraph/src-cli#installation) and [configured](https://github.com/sourcegraph/src-cli#setup) to point at your [Campaigns enabled](https://docs.sourcegraph.com/user/campaigns) Sourcegraph instance.
 
-This examples migrates from Travis CI to GitHub Actions for Go projects.
+This campaign migrates Go projects from Travis CI to GitHub Actions.
 
-What this does:
+What this action does:
 1. Delete `.travis.yml` file if exists.
-2. Copy over the template `go.yml` to `.github/workflows/go.yml` (contains jobs for linting and testing).
+2. Copy over the template `go.yml` from your local machine (on which `src` is being executed) to `.github/workflows/go.yml` (contains jobs for linting and testing) in each repository.
 
 ---
 
 ```json
 {
-  "scopeQuery": "file:.*_test.go repo:^github\\.com/gogs/ count:1000",
+  "scopeQuery": "repohasfile:.travis.yml lang:go",
   "steps": [
     {
       "type": "command",
@@ -24,7 +24,7 @@ What this does:
     },
     {
       "type": "command",
-      "args": ["cp", "<path to your directory>/go.yml", ".github/workflows/go.yml"]
+      "args": ["cp", "<path-to-file-on-your-local-machine>/go.yml", ".github/workflows/go.yml"]
     }
   ]
 }
