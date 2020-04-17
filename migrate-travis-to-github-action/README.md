@@ -10,6 +10,26 @@ What this does:
 
 ---
 
+```json
+{
+  "scopeQuery": "file:.*_test.go repo:^github\\.com/gogs/ count:1000",
+  "steps": [
+    {
+      "type": "command",
+      "args": ["rm", "-f", ".travis.yml"]
+    },
+    {
+      "type": "command",
+      "args": ["mkdir", "-p", ".github/workflows"]
+    },
+    {
+      "type": "command",
+      "args": ["cp", "/Users/unknwon/Downloads/travis2actions/go.yml", ".github/workflows/go.yml"]
+    }
+  ]
+}
+```
+
 Save as `action.json` and execute
 
 ```
