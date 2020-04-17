@@ -24,7 +24,7 @@ What this does:
     },
     {
       "type": "command",
-      "args": ["cp", "/Users/unknwon/Downloads/travis2actions/go.yml", ".github/workflows/go.yml"]
+      "args": ["cp", "<path to your directory>/go.yml", ".github/workflows/go.yml"]
     }
   ]
 }
