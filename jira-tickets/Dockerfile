@@ -1,8 +1,6 @@
 # Container image that runs your code
 FROM python:3.6-rc-alpine
 
-RUN apk add --no-cache \
-    tree
 
 RUN pip install requests
 
