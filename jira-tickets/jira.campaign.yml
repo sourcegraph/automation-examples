@@ -7,9 +7,6 @@ on:
 steps:
   - run: comby -in-place 'fmt.Sprintf("%d", :[v])' 'strconv.Itoa(:[v])' .go -matcher .go -exclude-dir .,vendor; echo "issue"
     container: comby/comby
-    outputs:
-      modifiedFiles:
-        value: "${{ step.modified_files }}"
   - run: >
       python ../create-jira.py
       --summary 'Update ${{repository.name}}'
