@@ -1,6 +1,6 @@
 name: reactor-go-jira
 description: |
-  This campaign creates Jira tickets
+  This campaign creates Jira tickets for each repository where fmt.Sprintf is replaced by strconv.Itoa.
 on:
   - repository: github.com/sourcegraph-testing/tiny-go-test-repository
 
