@@ -9,7 +9,7 @@ It will:
 It demonstrates how to use [steps.outputs](https://docs.sourcegraph.com/campaigns/references/campaign_spec_yaml_reference#steps-outputs) and [campaigns spec templating](https://docs.sourcegraph.com/campaigns/references/campaign_spec_templating).
 
 ## How to use
-- Modify the `jira_project`, `jira_username`, `jira_sitename` flags with your own
+- Modify the `jira_project`, `jira_username`, `jira_sitename` flags with your own in `jira.campaign.yml`
 - Create a [JIRA API token](https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/) and set it as the `JIRA_TOKEN` environment variable.
 
 
