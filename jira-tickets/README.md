@@ -16,6 +16,6 @@ It demonstrates how to use [steps.outputs](https://docs.sourcegraph.com/campaign
 JIRA_TOKEN=mysecrettoken src campaign apply -f jira.campaign.yaml
 
 ## Limitations
-Campaigns has a declarative syntax for code changes: if the state of the codebase has not changed between two runs, there will be no additional changesets created.
-It's up to the user to make sure that the steps the campaign runs are declarative.
-In this simple example, tickets are not "declarative": every time that the campaign runs, and changesets are created or updated, a new ticket will be created (instead of tickets being updated).
+* Campaigns has a declarative syntax for code changes: if the state of the codebase has not changed between two runs, there will be no additional changesets created.
+* It's up to the user to make sure that the steps the campaign runs are declarative.
+* In this simple example, tickets are not "declarative": every time that the campaign runs, and changesets are created or updated, a new ticket will be created (instead of tickets being updated).
