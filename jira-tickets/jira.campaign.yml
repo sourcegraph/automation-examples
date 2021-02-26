@@ -1,4 +1,4 @@
-name: reactor-go-jira
+name: refactor-go-jira
 description: |
   This campaign creates Jira tickets for each repository where fmt.Sprintf is replaced by strconv.Itoa.
 on:

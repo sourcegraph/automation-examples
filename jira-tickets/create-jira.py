@@ -74,7 +74,6 @@ response = requests.request(
 )
 
 try:
-    # issue = json.dumps(json.loads(response.text)["key"], sort_keys=True, indent=4, separators=(",", ": "))
     issue = json.loads(response.text)["key"]
     link = "https://"+args.jira_sitename+".atlassian.net/secure/RapidBoard.jspa?rapidView=1&modal=detail&projectKey="+args.jira_project+"&selectedIssue="+issue
     print(link)
