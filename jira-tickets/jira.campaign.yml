@@ -2,7 +2,6 @@ name: reactor-go-jira
 description: |
   This campaign creates Jira tickets
 on:
-  # - repositoriesMatchingQuery: lang:go fmt.Sprintf("%d", :[v]) patterntype:structural
   - repository: github.com/sourcegraph-testing/tiny-go-test-repository
 
 steps:
