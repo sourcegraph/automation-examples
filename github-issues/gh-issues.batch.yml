@@ -6,7 +6,7 @@ on:
   - repository: github.com/sourcegraph-testing/tiny-go-test-repository
 
 steps:
-  - run: comby -in-place 'fmt.Sprintf("%d", :[v])' 'strconv.Itoa(:[v])' .go -matcher .go -exclude-dir .,vendor; echo "issue"
+  - run: comby -in-place 'fmt.Sprintf("%d", :[v])' 'strconv.Itoa(:[v])' ${{ join repository.search_result_paths " " }}
     container: comby/comby
   - run: >
       python ../sync-issue.py
