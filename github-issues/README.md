@@ -20,7 +20,7 @@ It demonstrates how to use [steps.outputs](https://docs.sourcegraph.com/campaign
 - Create a [GitHub Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) and set it as the `GH_TOKEN` environment variable.
 
 ```bash
-GH_TOKEN=mysecrettoken
+export GH_TOKEN=mysecrettoken
 src campaign apply -f gh.issues.batch.yml
 ```
 
