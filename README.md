@@ -1,3 +1,12 @@
+This repository is NOT MAINTAINED anymore. 
+See [sourcegraph/batch-change-examples](https://github.com/sourcegraph/batch-change-examples)
+
+
+
+
+
+
+-----
 # Campaign examples
 
 Example action definitions to get you started with Sourcegraph Campaigns.
